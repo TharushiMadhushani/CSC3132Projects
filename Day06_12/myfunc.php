@@ -53,7 +53,7 @@ require_once 'dbconf.php';
 
 
 
-         function Empdetails($isbn,$connect){
+         function studentdetails($isbn,$connect){
             try{
             
                 $sql = "SELECT * FROM  book where isbn= $isbn ";
