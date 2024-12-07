@@ -46,7 +46,7 @@ catch(Exception $e){
 }
 }
  //GET DATA FROM DB
- function Searchestudent($empname,$connect){
+ function Searchestudent($name,$connect){
             try{
             
                 $sql = "SELECT * FROM  student where name like '%$name%' ";
