@@ -12,7 +12,7 @@ require_once 'dbconf.php';
 require_once 'myfunc.php';
 
 
-book($connect);
+student($connect);
 
 ?>
 
