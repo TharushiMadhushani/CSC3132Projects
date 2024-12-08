@@ -2,10 +2,10 @@
 //get the database connection file
 require_once 'dbconf.php';
  //GET DATA FROM DB
- function book($connect){
+ function student($connect){
             try{
             
-                $sql = "SELECT isbn,title FROM  book";
+                $sql = "SELECT id,name FROM  student";
             
             
                 $result = mysqli_query($connect,$sql);
@@ -30,9 +30,9 @@ require_once 'dbconf.php';
                     foreach ($row as $key => $value) {
                         echo "<td>$value</td>";
                     }
-                    $EMP_ID=$row['isbn'];
+                    $id=$row['id'];
                     //query string
-                    echo "<td><a href='printtable.php? EMP_ID=$EMP_ID '> View </a> </td>";
+                    echo "<td><a href='printtable.php? id=$id '> View </a> </td>";
                     echo "</tr>";
                     
                     }
@@ -53,10 +53,10 @@ require_once 'dbconf.php';
 
 
 
-         function studentdetails($isbn,$connect){
+         function studentdetails($id,$connect){
             try{
             
-                $sql = "SELECT * FROM  book where isbn= $isbn ";
+                $sql = "SELECT * FROM  student where id= $id";
             
             
                 $result = mysqli_query($connect,$sql);
