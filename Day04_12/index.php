@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
+   
     <a href="gettable.php">Gettable</a><br>
     
 
